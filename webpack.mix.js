@@ -11,5 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
+// On PHPStorm, when using with laravel mix, for Alias path resolving
+const config = require("./webpack.config");
+mix.webpackConfig(config);
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
